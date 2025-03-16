@@ -1,6 +1,7 @@
-const fetch = require('node-fetch');
+// netlify/functions/fetch-video.js
+import fetch from 'node-fetch';
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   const { videoId } = event.queryStringParameters;
   const apiKey = process.env.YOUTUBE_API_KEY;
 
