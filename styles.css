@@ -1,0 +1,166 @@
+/* Base Styles */
+:root {
+  --background: #1a1a1a;
+  --control-bg: #333333;
+  --control-text: #e0e0e0;
+  --primary: hsla(194, 73%, 59%, 1);
+  --primary-light: hsla(194, 73%, 71%, 1);
+  --primary-dark: hsla(194, 73%, 47%, 1);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--control-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Settings Drawer */
+.settings-drawer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.settings-toggle {
+  background: var(--control-bg);
+  color: var(--control-text);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.settings-content {
+  display: none;
+  background: var(--control-bg);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.settings-content h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.theme-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: var(--primary);
+  color: var(--control-text);
+}
+
+/* Input Field */
+#video-url {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px 0;
+  background: linear-gradient(to bottom, var(--control-bg), #222222);
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+  color: var(--control-text);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Action Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, var(--primary-light), var(--primary));
+  color: var(--control-text);
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.action-btn:hover {
+  background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+}
+
+.action-btn:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
+}
+
+/* Output Section */
+.output {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--control-bg);
+  border-radius: 5px;
+  min-height: 100px;
+  color: var(--control-text);
+}
+
+/* Theme Overrides */
+body.theme-pink {
+  --primary: hsla(333, 73%, 71%, 1);
+  --primary-light: hsla(333, 73%, 83%, 1);
+  --primary-dark: hsla(333, 73%, 59%, 1);
+}
+
+body.theme-green {
+  --primary: hsla(123, 55%, 62%, 1);
+  --primary-light: hsla(123, 55%, 74%, 1);
+  --primary-dark: hsla(123, 55%, 50%, 1);
+}
+
+body.theme-blue {
+  --primary: hsla(194, 73%, 59%, 1);
+  --primary-light: hsla(194, 73%, 71%, 1);
+  --primary-dark: hsla(194, 73%, 47%, 1);
+}
+
+body.theme-orange {
+  --primary: hsla(34, 87%, 68%, 1);
+  --primary-light: hsla(34, 87%, 80%, 1);
+  --primary-dark: hsla(34, 87%, 56%, 1);
+}
+
+body.theme-neutral {
+  --primary: hsla(0, 0%, 70%, 1);
+  --primary-light: hsla(0, 0%, 82%, 1);
+  --primary-dark: hsla(0, 0%, 58%, 1);
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .settings-content {
+    width: 200px;
+  }
+}

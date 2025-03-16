@@ -1,0 +1,10 @@
+{
+    "name": "Just the Details Dev Environment",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "18"
+      }
+    },
+    "postCreateCommand": "npm install -g live-server && sudo apt-get update && sudo apt-get install -y ffmpeg"
+  }
