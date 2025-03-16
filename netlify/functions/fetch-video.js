@@ -1,4 +1,3 @@
-// netlify/functions/fetch-video.js
 const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
@@ -22,7 +21,7 @@ exports.handler = async (event) => {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+    body: JSON.stringify({ error: error.message }),
     };
   }
 };
